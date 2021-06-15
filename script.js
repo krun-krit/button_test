@@ -61,57 +61,57 @@
 
     //  document.getElementById('output').innerText = student;
 
-    // function addStudentData(student){
-    //     const output = document.getElementById('output')
-    //     let row = document.createElement('div')
-    //     row.classList.add('row')
-    //     let columnName = document.createElement('div')
-    //     columnName.classList.add("col-1")
-    //     columnName.classList.add("offset-1")
-    //     columnName.innerHTML = 'ชื่อ'
-    //     let columnValue = document.createElement('div')
-    //     columnValue = document.createElement('row')
-    //     columnValue.classList.add('col')
-    //     columnValue.innerHTML = student.name;
-    //     row.appendChild(columnName)
-    //     row.appendChild(columnValue)
-    //     output.appendChild(row)
+    function addStudentData(student){
+        const output = document.getElementById('output')
+        let row = document.createElement('div')
+        row.classList.add('row')
+        let columnName = document.createElement('div')
+        columnName.classList.add("col-1")
+        columnName.classList.add("offset-1")
+        columnName.innerHTML = 'ชื่อ'
+        let columnValue = document.createElement('div')
+        columnValue = document.createElement('row')
+        columnValue.classList.add('col')
+        columnValue.innerHTML = student.name;
+        row.appendChild(columnName)
+        row.appendChild(columnValue)
+        output.appendChild(row)
 
 
-    //     row = document.createElement('div')
-    //     row.classList.add('row')
-    //     columnName = document.createElement('div')
-    //     columnName.classList.add("col-1")
-    //     columnName.classList.add("offset-1")
-    //     columnName.innerHTML = 'รหัส'
-    //     columnValue = document.createElement('div')
-    //     columnValue = document.createElement('row')
-    //     columnValue.classList.add('col')
-    //     columnValue.innerHTML = student.username;
-    //     row.appendChild(columnName)
-    //     row.appendChild(columnValue)
-    //     output.appendChild(row)
+        row = document.createElement('div')
+        row.classList.add('row')
+        columnName = document.createElement('div')
+        columnName.classList.add("col-1")
+        columnName.classList.add("offset-1")
+        columnName.innerHTML = 'รหัส'
+        columnValue = document.createElement('div')
+        columnValue = document.createElement('row')
+        columnValue.classList.add('col')
+        columnValue.innerHTML = student.username;
+        row.appendChild(columnName)
+        row.appendChild(columnValue)
+        output.appendChild(row)
 
 
-    //     row = document.createElement('div')
-    //     row.classList.add('row')
-    //     columnName = document.createElement('div')
-    //     columnName.classList.add("col-1")
-    //     columnName.classList.add("offset-1")
-    //     columnName.innerHTML = 'เพศ'
-    //     columnValue = document.createElement('div')
-    //     columnValue = document.createElement('row')
-    //     columnValue.classList.add('col')
-    //     columnValue.innerHTML = student.gender;
-    //     row.appendChild(columnName)
-    //     row.appendChild(columnValue)
-    //     output.appendChild(row)
-    // }
+        row = document.createElement('div')
+        row.classList.add('row')
+        columnName = document.createElement('div')
+        columnName.classList.add("col-1")
+        columnName.classList.add("offset-1")
+        columnName.innerHTML = 'เพศ'
+        columnValue = document.createElement('div')
+        columnValue = document.createElement('row')
+        columnValue.classList.add('col')
+        columnValue.innerHTML = student.gender;
+        row.appendChild(columnName)
+        row.appendChild(columnValue)
+        output.appendChild(row)
+    }
 
-    // window.addEventListener("load",function(){
-    //         addStudentData(student)
-    //         addStudentData(student2)
-    // })
+    window.addEventListener("load",function(){
+            addStudentData(student)
+            addStudentData(student2)
+    })
 
     var students = [
         stuednt,
@@ -149,10 +149,11 @@
         }
     }
     
+    var x
+
     function onLoad(){
-        let students
         fetch('asset/students.json').then(data =>{
-            students = data.json()
+            x = data.json()
         })
-        console.log(stuednts)
+        console.log(x)
     }
