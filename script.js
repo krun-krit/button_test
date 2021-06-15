@@ -122,3 +122,26 @@
             gender : 'ชาย'
         }
     ]  
+
+    function addStudentData(index, student){
+        const tableBody = document.getElementById('tableBody')
+        let row = document.createElement('tr')
+        let cell = document.createElement('th')
+        cell.setAttribute('score','row')
+        cell.innerHTML = index
+        row.appendChild(cell)
+        cell = document.createElement('td')
+        cell.innerHTML = student.name
+        row.appendChild(cell)
+        cell = document.createElement('td')
+        cell.innerHTML = student.username
+        cell.innerHTML(cell)
+        cell = document.createElement('td')
+        cell.innerHTML = student.gender
+        row.appendChild(cell)
+        tableBody.appendChild(row)
+    }
+    
+    window.addEventListener("load", function() {
+        addStudentData(student)
+    })
