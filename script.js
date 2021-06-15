@@ -58,6 +58,7 @@
     student2.username = 'lady@boy.com'
     student2.gender = 'หญิง'
 
+
      document.getElementById('output').innerText = student;
 
     function addStudentData(student){
@@ -111,3 +112,13 @@
             addStudentData(student)
             addStudentData(student2)
     })
+
+    var students = [
+        stuednt,
+        student2,
+        {
+            name : 'สมรักษ์',
+            username : 'm@n.com',
+            gender : 'ชาย'
+        }
+    ]  
