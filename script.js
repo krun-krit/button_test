@@ -124,6 +124,7 @@
     ]  
 
     function addStudentData(index, student){
+        console.log(5)
         const tableBody = document.getElementById('tableBody')
         let row = document.createElement('tr')
         let cell = document.createElement('th')
