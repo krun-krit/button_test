@@ -124,7 +124,6 @@
     ]  
 
     function addStudentData(index, student){
-        console.log(5)
         const tableBody = document.getElementById('tableBody')
         let row = document.createElement('tr')
         let cell = document.createElement('th')
@@ -138,7 +137,8 @@
         // cell.innerHTML = student.username
         let img = document.createElement('img')
         img.setAttribute('src', student.imageLink)
-        cell.innerHTML(cell)
+        cell.appendChild(img)
+        row.appendChild(cell)
         cell = document.createElement('td')
         cell.innerHTML = student.gender
         row.appendChild(cell)
@@ -148,7 +148,7 @@
     function addStudentList(studentList){
         let counter = 1
         for (student of studentList){
-            addStudentToTable(counter++, student)
+            addStudentData(counter++, student)
         }
     }
     
