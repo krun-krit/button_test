@@ -149,4 +149,10 @@
         }
     }
     
-  
+    function onLoad(){
+        let students
+        fetch('asset/students.json').then(data =>{
+            students = data.json()
+        })
+        console.log(stuednts)
+    }
