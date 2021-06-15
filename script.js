@@ -48,10 +48,10 @@
     
 //  })
 
-//  var stuednt = [];
-//      stuednt.name = 'คุณลุง'
-//      stuednt.username = 'a@b.com'
-//      stuednt.gender = 'ชาย'
+ var stuednt = [];
+     stuednt.name = 'คุณลุง'
+     stuednt.username = 'a@b.com'
+     stuednt.gender = 'ชาย'
 
 //      document.getElementById('output').innerText = student;
 
