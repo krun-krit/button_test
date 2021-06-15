@@ -158,6 +158,6 @@
         })
             .then(data =>{
                 let students = data
-                addStudentList(students)
+                addStudentList(data)
             })
     }
