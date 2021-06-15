@@ -108,10 +108,10 @@
         output.appendChild(row)
     }
 
-    window.addEventListener("load",function(){
-            addStudentData(student)
-            addStudentData(student2)
-    })
+    // window.addEventListener("load",function(){
+    //         addStudentData(student)
+    //         addStudentData(student2)
+    // })
 
     var students = [
         stuednt,
@@ -134,7 +134,9 @@
         cell.innerHTML = student.name
         row.appendChild(cell)
         cell = document.createElement('td')
-        cell.innerHTML = student.username
+        // cell.innerHTML = student.username
+        let img = document.createElement('img')
+        img.setAttribute('src', student.imageLink)
         cell.innerHTML(cell)
         cell = document.createElement('td')
         cell.innerHTML = student.gender
@@ -149,11 +151,13 @@
         }
     }
     
-    var x
 
     function onLoad(){
-        fetch('asset/students.json').then(data =>{
-            x = data.json()
+        fetch('asset/students2.json').then(response =>{
+            return response.json()
         })
-        console.log(x)
+            .then(data =>{
+                let students = data
+                addStudentList(students)
+            })
     }
