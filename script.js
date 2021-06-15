@@ -52,16 +52,21 @@
      stuednt.name = 'คุณลุง'
      stuednt.username = 'a@b.com'
      stuednt.gender = 'ชาย'
+   
+  var student2 = [];
+    student2.name = 'ใจเริง'
+    student2.username = 'lady@boy.com'
+    student2.gender = 'หญิง'
 
-//      document.getElementById('output').innerText = student;
+     document.getElementById('output').innerText = student;
 
     function addStudentData(student){
         const output = document.getElementById('output')
         let row = document.createElement('div')
         row.classList.add('row')
         let columnName = document.createElement('div')
-        columnName.classList.add('col-1')
-        columnName.classList.add('offset-1')
+        columnName.classList.add("col-1")
+        columnName.classList.add("offset-1")
         columnName.innerHTML = 'ชื่อ'
         let columnValue = document.createElement('div')
         columnValue = document.createElement('row')
@@ -70,8 +75,39 @@
         row.appendChild(columnName)
         row.appendChild(columnValue)
         output.appendChild(row)
+
+
+        row = document.createElement('div')
+        row.classList.add('row')
+        columnName = document.createElement('div')
+        columnName.classList.add("col-1")
+        columnName.classList.add("offset-1")
+        columnName.innerHTML = 'รหัส'
+        columnValue = document.createElement('div')
+        columnValue = document.createElement('row')
+        columnValue.classList.add('col')
+        columnValue.innerHTML = student.username;
+        row.appendChild(columnName)
+        row.appendChild(columnValue)
+        output.appendChild(row)
+
+
+        row = document.createElement('div')
+        row.classList.add('row')
+        columnName = document.createElement('div')
+        columnName.classList.add("col-1")
+        columnName.classList.add("offset-1")
+        columnName.innerHTML = 'เพศ'
+        columnValue = document.createElement('div')
+        columnValue = document.createElement('row')
+        columnValue.classList.add('col')
+        columnValue.innerHTML = student.gender;
+        row.appendChild(columnName)
+        row.appendChild(columnValue)
+        output.appendChild(row)
     }
 
-    window.addEventListener("load", function(){
+    window.addEventListener("load",function(){
             addStudentData(student)
-    }
+            addStudentData(student2)
+    })
